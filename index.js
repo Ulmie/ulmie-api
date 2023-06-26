@@ -18,11 +18,13 @@ app.use((req, res, next) => {
 });
 app.use(express.json());
 app.use(
-  cors({
-    // origin: "http://localhost:3000",
-    origin: "https://bejewelled-pie-c7737c.netlify.app",
-  })
+  cors()
 );
+
+// {
+//   // origin: "http://localhost:3000",
+//   origin: "https://bejewelled-pie-c7737c.netlify.app",
+// }
 app.use(cookieParser());
 
 const storage = multer.diskStorage({
