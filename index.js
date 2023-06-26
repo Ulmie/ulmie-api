@@ -12,10 +12,11 @@ import multer from "multer";
 import cookieParser from "cookie-parser";
 
 //middlewares
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Credentials", true);
-  next();
-});
+// app.use((req, res, next) => {
+//   res.header("Access-Control-Allow-Credentials", true);
+//   next();
+// });
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
   cors()
