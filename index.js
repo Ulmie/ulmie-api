@@ -12,10 +12,10 @@ import multer from "multer";
 import cookieParser from "cookie-parser";
 
 //middlewares
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Credentials", true);
-//   next();
-// });
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
@@ -52,6 +52,6 @@ app.use("/api/likes", likeRoutes);
 app.use("/api/followers", followerRoutes);
 app.use("/api/relationships", relationshipRoutes);
 
-app.listen(5000, () => {
+app.listen(7734, () => {
   console.log("API working!");
 });
