@@ -51,6 +51,6 @@ app.use("/api/likes", likeRoutes);
 app.use("/api/followers", followerRoutes);
 app.use("/api/relationships", relationshipRoutes);
 
-app.listen(8800, () => {
+app.listen(5000, () => {
   console.log("API working!");
 });
