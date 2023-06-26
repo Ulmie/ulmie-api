@@ -19,7 +19,9 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
-  cors()
+  cors({
+    origin: "https://bejewelled-pie-c7737c.netlify.app",
+  })
 );
 
 // {
