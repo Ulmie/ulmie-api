@@ -1,5 +1,5 @@
 import mysql from "mysql";
-require("dotenv").config();
+import 'dotenv/config'
 
 // export const db = mysql.createConnection({
 //   host: "localhost",
