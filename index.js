@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://bejewelled-pie-c7737c.netlify.app",
+    origin: "https://main--bejewelled-pie-c7737c.netlify.app",
   })
 );
 
