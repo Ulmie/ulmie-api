@@ -1,4 +1,5 @@
 import mysql from "mysql";
+require("dotenv").config();
 
 // export const db = mysql.createConnection({
 //   host: "localhost",
@@ -7,6 +8,6 @@ import mysql from "mysql";
 //   database: "ulmie-v1"
 // })
 
-const urlDB = 'mysql://root:1iYa2VCRy3m9qwyB3ASK@containers-us-west-120.railway.app:7734/railway';
+const urlDB = `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}`;
 
 export const db = mysql.createConnection(urlDB);
